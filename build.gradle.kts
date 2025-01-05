@@ -76,7 +76,7 @@ afterEvaluate {
 
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-tutorial-ui"
-                version = "v1.0.5"
+                version = "v1.0.6"
 
                 pom {
                     name.set("leom-game-tutorial-ui")
