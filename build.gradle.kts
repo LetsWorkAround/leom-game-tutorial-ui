@@ -48,7 +48,7 @@ android {
 }
 
 dependencies {
-    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
+    implementation(platform("androidx.compose:compose-bom:2024.01.00"))
     implementation("androidx.compose.foundation:foundation")
 
     // libs 참조를 직접 버전으로 변경
@@ -73,7 +73,7 @@ afterEvaluate {
 
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-tutorial-ui"
-                version = "v1.0.6"
+                version = "v1.0.8"
 
                 pom {
                     name.set("leom-game-tutorial-ui")
