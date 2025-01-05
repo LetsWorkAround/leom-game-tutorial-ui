@@ -1,16 +1,16 @@
 plugins {
-    alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.android.library") version "8.2.0"
+    id("org.jetbrains.kotlin.android") version "1.9.0"
     id("maven-publish")
 }
 
 android {
+    // android 블록은 그대로 유지
     namespace = "com.leom.game_tutorial_ui"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
@@ -48,35 +48,33 @@ android {
 }
 
 dependencies {
-
-
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     implementation("androidx.compose.foundation:foundation")
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    // libs 참조를 직접 버전으로 변경
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.11.0")
     implementation(project(":commonDatas"))
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("androidx.compose.ui:ui:1.5.4")
     implementation("androidx.compose.material3:material3:1.1.2")
     implementation("androidx.compose.runtime:runtime:1.5.4")
 }
 
 afterEvaluate {
+    // publishing 블록은 그대로 유지
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
 
-                // 아티팩트 정보 설정
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-tutorial-ui"
                 version = "v1.0.2"
 
-                // pom 정보 설정
                 pom {
                     name.set("leom-game-tutorial-ui")
                     description.set("Game Tutorial UI Library")
