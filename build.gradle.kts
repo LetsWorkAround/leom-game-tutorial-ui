@@ -64,3 +64,24 @@ dependencies {
     implementation("androidx.compose.material3:material3:1.1.2")
     implementation("androidx.compose.runtime:runtime:1.5.4")
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+
+                // 아티팩트 정보 설정
+                groupId = "com.github.LetsWorkAround"
+                artifactId = "leom-game-tutorial-ui"
+                version = "v1.0.0"
+
+                // pom 정보 설정
+                pom {
+                    name.set("leom-game-tutorial-ui")
+                    description.set("Game Tutorial UI Library")
+                }
+            }
+        }
+    }
+}
