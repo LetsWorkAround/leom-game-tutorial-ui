@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library") version "8.2.0"
-    id("org.jetbrains.kotlin.android") version "1.9.0"
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
 
@@ -73,7 +73,7 @@ afterEvaluate {
 
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-tutorial-ui"
-                version = "v1.0.2"
+                version = "v1.0.3"
 
                 pom {
                     name.set("leom-game-tutorial-ui")
