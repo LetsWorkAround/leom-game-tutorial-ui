@@ -32,13 +32,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.leom.commondatas.RulesSectionStrings
-import com.leom.commondatas.SwipeTutorialStrings
-import com.leom.commondatas.TapTutorialStrings
-import com.leom.commondatas.TutorialScreenStrings
+import com.leom.game_tutorial_ui.models.RulesSectionStrings
+import com.leom.game_tutorial_ui.models.SwipeTutorialStrings
+import com.leom.game_tutorial_ui.models.TapTutorialStrings
+import com.leom.game_tutorial_ui.models.TutorialScreenStrings
 import com.leom.game_tutorial_ui.R
 import com.leom.game_tutorial_ui.theme.BorderLines
 import com.leom.game_tutorial_ui.theme.Borders
