@@ -74,7 +74,7 @@ afterEvaluate {
                 // 아티팩트 정보 설정
                 groupId = "com.github.LetsWorkAround"
                 artifactId = "leom-game-tutorial-ui"
-                version = "v1.0.0"
+                version = "v1.0.2"
 
                 // pom 정보 설정
                 pom {
